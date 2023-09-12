@@ -76,7 +76,7 @@ function generateBarChart(percent, size) {
 
   return [syms.substring(8, 9).repeat(barsFull), syms.substring(semi, semi + 1)]
     .join("")
-    .padEnd(size, syms.substring(0, 1));
+    .padEnd(size - 1, syms.substring(0, 1));
 }
 
 (async () => {
