@@ -38,7 +38,7 @@ async function updateGist(stats) {
     const line = [
       trimRightStr(name, 10).padEnd(10),
       time.padEnd(14),
-      generateBarChart(percent, 21),
+      generateBarChart(percent, 20),
       String(percent.toFixed(1)).padStart(5) + "%"
     ];
 
@@ -76,7 +76,7 @@ function generateBarChart(percent, size) {
 
   return [syms.substring(8, 9).repeat(barsFull), syms.substring(semi, semi + 1)]
     .join("")
-    .padEnd(size - 1, syms.substring(0, 1));
+    .padEnd(size, syms.substring(0, 1));
 }
 
 (async () => {

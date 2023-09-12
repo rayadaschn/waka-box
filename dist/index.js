@@ -281,7 +281,7 @@ module.exports = (function(e, a) {
           const n = [
             trimRightStr(s, 10).padEnd(10),
             t.padEnd(14),
-            generateBarChart(o, 21),
+            generateBarChart(o, 20),
             String(o.toFixed(1)).padStart(5) + "%"
           ];
           p.push(n.join(" "));
@@ -312,7 +312,7 @@ module.exports = (function(e, a) {
         const o = i % 8;
         return [p.substring(8, 9).repeat(s), p.substring(o, o + 1)]
           .join("")
-          .padEnd(a - 1, p.substring(0, 1));
+          .padEnd(a, p.substring(0, 1));
       }
       (async () => {
         await main();
