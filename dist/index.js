@@ -310,9 +310,7 @@ module.exports = (function(e, a) {
           return p.substring(8, 9).repeat(a);
         }
         const o = i % 8;
-        return [p.substring(8, 9).repeat(s), p.substring(o, o + 1)]
-          .join("")
-          .padEnd(a, p.substring(0, 1));
+        return [p.substring(8, 9).repeat(s), p.substring(o, o + 1)].join("");
       }
       (async () => {
         await main();
